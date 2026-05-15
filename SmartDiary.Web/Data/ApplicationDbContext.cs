@@ -68,18 +68,6 @@ namespace SmartDiary.Web.Data
                 .WithMany(t => t.TaskTags)
                 .HasForeignKey(tt => tt.TagId)
                 .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<Task>()
-                .HasIndex(t => t.Status)
-                .HasDatabaseName("IX_Task_Status");
-
-            modelBuilder.Entity<Task>()
-                .HasIndex(t => t.Deadline)
-                .HasDatabaseName("IX_Task_Deadline");
-
-            modelBuilder.Entity<Task>()
-                .HasIndex(t => new { t.UserId, t.Status })
-                .HasDatabaseName("IX_Task_UserId_Status");
         }
     }
 }
