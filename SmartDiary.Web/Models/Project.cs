@@ -16,7 +16,7 @@ namespace SmartDiary.Web.Models
         [DataType(DataType.DateTime)]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         // Внешний ключ
-        public int OwnerId { get; set; }
+        public string? OwnerId { get; set; }
         // Навигационные свойства
         [ForeignKey("OwnerId")]
         public User? Owner { get; set; }

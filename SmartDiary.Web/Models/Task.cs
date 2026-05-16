@@ -21,7 +21,7 @@ namespace SmartDiary.Web.Models
         public string Priority { get; set; } = "Medium"; // Low, Medium, High
                                                          // Внешние ключи
         public int? ProjectId { get; set; }
-        public int UserId { get; set; }
+        public string? UserId { get; set; }
         // Навигационные свойства
         [ForeignKey("ProjectId")]
         public Project? Project { get; set; }

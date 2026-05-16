@@ -9,7 +9,7 @@ namespace SmartDiary.Web.Models
         [StringLength(50, ErrorMessage = "Название тега не может превышать 50 символов")]
         public string? Name { get; set; }
         // Внешний ключ
-        public int OwnerId { get; set; }
+        public string? OwnerId { get; set; }
         // Навигационные свойства
         public User? Owner { get; set; }
         // Связь многие-ко-многим с Task
